@@ -7,6 +7,7 @@ require (
 	github.com/labstack/echo/v4 v4.13.3
 	github.com/testcontainers/testcontainers-go/modules/mongodb v0.34.0
 	go.mongodb.org/mongo-driver v1.17.1
+	gotest.tools/v3 v3.5.1
 )
 
 require (
@@ -29,6 +30,7 @@ require (
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
+	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/klauspost/compress v1.17.4 // indirect
 	github.com/labstack/gommon v0.4.2 // indirect
