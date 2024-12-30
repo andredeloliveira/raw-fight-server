@@ -7,5 +7,20 @@ import (
 )
 
 func TestFighter(t *testing.T) {
-	assert.Assert(t, true == true)
+
+	fighter := Fighter{
+		Name:    "Fighter1",
+		HP:      100,
+		Stamina: 80,
+		BaseStats: Stats{
+			Attack:  30,
+			Defense: 40,
+			Dodge:   10,
+		},
+	}
+
+	t.Run("Test recover stamina", func(t *testing.T) {
+		fighter.RecoverStamina()
+		assert.Assert(t, fighter.Stamina > 80 && fighter.Stamina <= 90)
+	})
 }

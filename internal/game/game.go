@@ -7,3 +7,7 @@ type Game struct {
 	Player2 *fighter.Fighter
 	Round   int
 }
+
+const (
+	MaxRounds = 3
+)

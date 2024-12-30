@@ -7,6 +7,7 @@ import (
 
 type Actions interface {
 	Execute(g *game.Game, attacker *fighter.Fighter, defender *fighter.Fighter) error
-	GetStaminaCost(action string, f fighter.Fighter) error
+	GetStaminaCost() int
 	Register(g *game.Game) error
+	Error(msg string) error
 }
