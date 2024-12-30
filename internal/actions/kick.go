@@ -31,12 +31,9 @@ func (k *Kick) Execute(
 	}
 	baseDamage := CalculateBaseDamage(attacker.BaseStats.Attack)
 	modifiedDamage := float64(baseDamage) * k.damageMultiplier
-	actualDamage := CalculateActualDamage(modifiedDamage, attacker.BaseStats.Defense)
+	actualDamage := CalculateActualDamage(modifiedDamage, defender.BaseStats.Defense)
 	defender.HP -= actualDamage
 	attacker.Stamina -= k.GetStaminaCost()
-
-	// As I have the game.. I probably should end the round if the HP is lower than what is expected..
-	// should I do this in here?
 	return nil
 }
 
