@@ -7,10 +7,6 @@ type Dodge struct{}
 type Jump struct{}
 type Duck struct{}
 
-type Punch struct {
-	damageMultiplier float64
-}
-
 func CalculateBaseDamage(attackStat int) int {
 	minDamage := int(float64(attackStat) * 0.5)
 	maxDamage := attackStat

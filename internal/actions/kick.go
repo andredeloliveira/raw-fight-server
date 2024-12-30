@@ -7,6 +7,10 @@ import (
 	"github.com/pkg/errors"
 )
 
+const (
+	KickStaminaCost = 10
+)
+
 type Kick struct {
 	damageMultiplier float64
 }
@@ -26,7 +30,7 @@ func (k *Kick) Execute(
 	attacker *fighter.Fighter,
 	defender *fighter.Fighter,
 ) error {
-	if attacker.Stamina <= 0 {
+	if attacker.Stamina <= 0 || attacker.Stamina < k.GetStaminaCost() {
 		return k.Error("Not enough stamina")
 	}
 	baseDamage := CalculateBaseDamage(attacker.BaseStats.Attack)
@@ -39,7 +43,7 @@ func (k *Kick) Execute(
 
 // Kick will have a fixed stamina cost
 func (k *Kick) GetStaminaCost() int {
-	return 10
+	return KickStaminaCost
 }
 
 func (k *Kick) Register(g *game.Game) error {
