@@ -2,8 +2,6 @@ package actions
 
 import "math/rand/v2"
 
-type Dodge struct{}
-
 func CalculateBaseDamage(attackStat int) int {
 	minDamage := int(float64(attackStat) * 0.5)
 	maxDamage := attackStat
