@@ -104,3 +104,16 @@ func TestPunch(t *testing.T) {
 		assert.Equal(t, defender.HP, defenderHPBeforePunch)
 	})
 }
+
+func TestBlock(t *testing.T) {
+	attacker, defender, game := setupGame()
+	block := NewBlock()
+
+	t.Run("Should block without any problems", func(t *testing.T) {
+		defenderHPBeforeBlock := defender.HP
+		err := block.Execute(&game, &attacker, &defender)
+		assert.Equal(t, err, nil)
+		assert.Equal(t, defenderHPBeforeBlock, defender.HP)
+	})
+
+}

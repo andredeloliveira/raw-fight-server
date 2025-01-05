@@ -2,10 +2,7 @@ package actions
 
 import "math/rand/v2"
 
-type Block struct{}
 type Dodge struct{}
-type Jump struct{}
-type Duck struct{}
 
 func CalculateBaseDamage(attackStat int) int {
 	minDamage := int(float64(attackStat) * 0.5)

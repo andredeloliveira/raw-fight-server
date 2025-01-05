@@ -37,7 +37,6 @@ func (p *Punch) Execute(
 	actualDamage := CalculateActualDamage(modifiedDamage, defender.BaseStats.Defense)
 	defender.HP -= actualDamage
 	attacker.Stamina -= p.GetStaminaCost()
-
 	return nil
 }
 
