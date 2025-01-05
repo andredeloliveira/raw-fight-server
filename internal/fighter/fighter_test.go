@@ -15,7 +15,6 @@ func TestFighter(t *testing.T) {
 		BaseStats: Stats{
 			Attack:  30,
 			Defense: 40,
-			Dodge:   10,
 		},
 	}
 

@@ -32,7 +32,6 @@ func setupGame() (fighter.Fighter, fighter.Fighter, game.Game) {
 		BaseStats: fighter.Stats{
 			Attack:  50,
 			Defense: 50,
-			Dodge:   25,
 		},
 	}
 	fighter2 := fighter.Fighter{
@@ -42,7 +41,6 @@ func setupGame() (fighter.Fighter, fighter.Fighter, game.Game) {
 		BaseStats: fighter.Stats{
 			Attack:  40,
 			Defense: 40,
-			Dodge:   20,
 		},
 	}
 	game := game.Game{
